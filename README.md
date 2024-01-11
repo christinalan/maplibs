@@ -1,3 +1,6 @@
+## MapLibs re-vamp webste
+This is the new repo for the updated MapLibs site. Stack includes Next.js, react, and tailwind
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
