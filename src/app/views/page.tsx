@@ -15,14 +15,14 @@ export default function Views() {
                     />
                 </Link>
                 </div>
-            <div className="w-5/6 h-96 border-2 border-slate-300">view content goes here</div>
+            <div className="w-11/12 sm:w-5/6 h-96 border-2 border-slate-300">view content goes here</div>
 
-            <div className="flex p-4 gap-10 items-center justify-center">
-                <div className="bg-sky-500 bg-opacity-40 rounded-full flex items-center text-center justify-center cursor-pointer" style={{width: '200px', height: '200px'}}>
+            <div className="flex flex-col sm:flex-row p-4 gap-10 items-center sm:justify-center">
+                <div className="bg-sky-500 bg-opacity-40 rounded-full flex order-2 sm:order-1 items-center text-center justify-center cursor-pointer" style={{width: '200px', height: '200px'}}>
                     <Link href="/maplib">Play MapLibs</Link>
                 </div>
                 <div className="flex flex-col items-center gap-20 justify-between">
-                    <div className="flex gap-10">
+                    <div className="flex flex-col sm:flex-row gap-10">
                         <p>Description of image/video/sound</p>
                         <p>Info about the author of the submission</p>
                     </div>
