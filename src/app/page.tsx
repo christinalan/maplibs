@@ -3,7 +3,7 @@ import Image from 'next/image'
 import statue from '../images/statue.png'
 import { Figtree } from 'next/font/google'
 import { Cormorant } from 'next/font/google'
-import { text } from 'stream/consumers'
+import Background from './background/page'
 
 const figtree = Figtree({ subsets: ['latin'] })
 const cormorant = Cormorant({ subsets: ['latin']})
@@ -11,7 +11,6 @@ const cormorant = Cormorant({ subsets: ['latin']})
 export default function Home() {
   return (
     <main className="min-h-screen py-8 px-2 sm:py-12 sm:px-16 flex flex-col">
-      
     <nav className="flex flex-col items-center">
       <div className="flex flex-row text-xl sm:text-lg sm:w-1/4 gap-10 sm:place-content-between cursor-pointer">
         <Link href="/about">
@@ -33,12 +32,12 @@ export default function Home() {
     <div className={`${figtree.className} flex flex-col sm:flex-row gap-5 content-between pt-8 sm:p-32 items-center justify-between`}>
 
     <Link href="/maplib">
-      <div className="bg-sky-500 bg-opacity-60 sm:bg-opacity-40 rounded-full flex items-center text-center justify-center cursor-pointer" style={{width: '200px', height: '200px'}}>
+      <div className="bg-sky-500 bg-opacity-60 sm:bg-opacity-50 rounded-full flex items-center text-center justify-center cursor-pointer" style={{width: '200px', height: '200px'}}>
         <p>Play MapLibs</p>
       </div>
       </Link>
       <Link href="/views">
-      <div className="bg-sky-500 bg-opacity-60 sm:bg-opacity-40 rounded-full flex items-center text-center justify-center cursor-pointer" style={{width: '200px', height: '200px'}}>
+      <div className="bg-sky-500 bg-opacity-60 sm:bg-opacity-50 rounded-full flex items-center text-center justify-center cursor-pointer" style={{width: '200px', height: '200px'}}>
         <p>Explore a View of Bronzeville</p>
       </div>
       </Link>

@@ -9,10 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-three/drei": "^9.93.1",
+    "@react-three/fiber": "^8.15.14",
+    "@types/three": "^0.160.0",
     "material-symbols": "^0.14.4",
     "next": "14.0.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "three": "^0.160.0"
   },
   "devDependencies": {
     "@types/node": "^20",
