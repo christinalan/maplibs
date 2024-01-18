@@ -3,7 +3,6 @@ import Image from 'next/image'
 import statue from '../images/statue.png'
 import { Figtree } from 'next/font/google'
 import { Cormorant } from 'next/font/google'
-import Background from './background/page'
 
 const figtree = Figtree({ subsets: ['latin'] })
 const cormorant = Cormorant({ subsets: ['latin']})
