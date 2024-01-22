@@ -11,18 +11,19 @@ export default function Home() {
   return (
     <main className="min-h-screen py-8 px-2 sm:py-12 sm:px-16 flex flex-col">
     <nav className="flex flex-col items-center">
-      <div className="flex flex-row text-xl sm:text-lg sm:w-1/4 gap-10 sm:place-content-between cursor-pointer">
+      <div className="flex flex-row text-xl sm:text-lg sm:w-1/4 gap-10 sm:place-content-between cursor-pointer text-sky-600">
         <Link href="/about">
-          <p className="hover:text-sky-200">About</p>
+          <p className="hover:text-slate-500">About</p>
         </Link>
         <Link href="/book">
-          <p className="hover:text-sky-200">Buy the Book</p>
+          <p className="hover:text-slate-500">Buy the Book</p>
         </Link>
       </div>
-      <div className="w-11/12 sm:w-5/6 h-1 bg-slate-100 mt-2 opacity-50"></div>
+      {/* line under nav */}
+      <div className="w-11/12 sm:w-5/6 h-1 bg-sky-600 mt-2 opacity-50"></div>
      
-    <div className="mx-6 sm:mx-44 text-center pt-10">
-        <h1 className={`${cormorant.className} text-2xl sm:text-2xl`}>
+    <div className="mx-12 sm:mx-2 w-11/12 sm:w-5/6 text-center mt-4">
+        <h1 className={`${cormorant.className} text-2xl sm:text-2xl sm:mx-10 text-slate-600`}>
         The Maplibs Project is a living atlas of the spaces that make feel, remember, and imagine community in the greater Bronzeville neighborhoods.
         </h1>
     </div>
@@ -31,13 +32,13 @@ export default function Home() {
     <div className={`${figtree.className} flex flex-col sm:flex-row gap-5 content-between pt-8 sm:p-32 items-center justify-between`}>
 
     <Link href="/maplib">
-      <div className="bg-sky-500 bg-opacity-60 sm:bg-opacity-50 rounded-full flex items-center text-center justify-center cursor-pointer" style={{width: '200px', height: '200px'}}>
-        <p>Play MapLibs</p>
+      <div className="bg-sky-500 bg-opacity-60 sm:bg-opacity-70 rounded-full flex items-center text-center justify-center cursor-pointer" style={{width: '200px', height: '200px'}}>
+        <p className="text-slate-600">Play MapLibs</p>
       </div>
       </Link>
       <Link href="/views">
-      <div className="bg-sky-500 bg-opacity-60 sm:bg-opacity-50 rounded-full flex items-center text-center justify-center cursor-pointer" style={{width: '200px', height: '200px'}}>
-        <p>Explore a View of Bronzeville</p>
+      <div className="bg-sky-500 bg-opacity-60 sm:bg-opacity-70 rounded-full flex items-center text-center justify-center cursor-pointer" style={{width: '200px', height: '200px'}}>
+        <p className="text-slate-600">Explore a View of Bronzeville</p>
       </div>
       </Link>
       
@@ -45,11 +46,9 @@ export default function Home() {
 
 
     <div className="flex mx-auto before:fixed before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl after:-z-20 after:h-[100px] after:w-[300px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-sky-400 after:blur-2xl before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-sky-200 before:dark:opacity-10 after:dark:from-sky-300 after:dark:via-[#0369a1] after:dark:opacity-30 before:lg:h-[180px] z-[-1]">
-          <div className="fixed -bottom-2 -z-1 opacity-25 sm:opacity-70">
+          <div className="fixed -bottom-2 -z-1 opacity-25 sm:opacity-70 w-72 sm:w-72">
             <Image
                 src={statue}
-                width={300}
-                height={300}
                 alt="Picture of the Bronzeville Statue"
               />
             </div>

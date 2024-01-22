@@ -5,29 +5,6 @@ import { TextureLoader } from 'three/src/loaders/TextureLoader'
 import * as THREE from 'three';
 // import { OrbitControls } from '@react-three/drei'
 
-function Box(props) {
-    // This reference gives us direct access to the THREE.Mesh object
-    const ref = useRef()
-    // Hold state for hovered and clicked events
-    const [hovered, hover] = useState(false)
-    const [clicked, click] = useState(false)
-    // Subscribe this component to the render-loop, rotate the mesh every frame
-    useFrame((state, delta) => (ref.current.rotation.x += delta))
-    // Return the view, these are regular Threejs elements expressed in JSX
-    return (
-      <mesh
-        {...props}
-        ref={ref}
-        scale={clicked ? 1.5 : 1}
-        onClick={(event) => click(!clicked)}
-        onPointerOver={(event) => (event.stopPropagation(), hover(true))}
-        onPointerOut={(event) => hover(false)}>
-        <boxGeometry args={[1, 1, 1]} />
-        <meshStandardMaterial color={hovered ? 'hotpink' : 'orange'} />
-      </mesh>
-    )
-  }
-
 const Cloud = () => {
     
     // Load vertex and fragment shaders as text
@@ -157,17 +134,23 @@ export default function Background() {
     const [camPosition, setCamPosition] = useState([0, 0, 50])  
 
     return (
-        <div className="w-screen h-screen fixed top-0 left-0 opacity-70 -z-10">
+        <div className="w-screen h-screen fixed top-0 left-0 -z-10">
             <Canvas 
                 camera={{fov:50, near:1, far:3000, position:camPosition}}
+                onCreated={({ gl }) => {
+                    // Set pixel ratio for better quality on high-DPI screens
+                    gl.setPixelRatio(window.devicePixelRatio);
+                    // Handle resizing
+                    window.addEventListener('resize', () => {
+                      gl.setSize(window.innerWidth, window.innerHeight);
+                    });
+                  }}
             >
-                {/* <Box position={[0, 0, 0]} /> */}
                
                  {/* Create multiple Cloud instances */}
                 {Array.from({ length: 300 }).map((_, index) => (
                     <Cloud key={index}/>
                 ))}
-                {/* <OrbitControls /> */}
             </Canvas>
 
         </div>

@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   description: 'Living archive of Bronzeville, Chicago',
 }
 
+
 export default function RootLayout({
   children,
 }: {
