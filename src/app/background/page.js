@@ -116,7 +116,7 @@ const Cloud = () => {
 
     return (
         <mesh ref={meshRef}>
-            <planeGeometry args={[50, 64]}/>
+            <planeGeometry args={[30, 30]}/>
             <shaderMaterial 
                 uniforms={uniforms}
                 fragmentShader={fragmentShader}
@@ -148,7 +148,7 @@ export default function Background() {
             >
                
                  {/* Create multiple Cloud instances */}
-                {Array.from({ length: 300 }).map((_, index) => (
+                {Array.from({ length: 50 }).map((_, index) => (
                     <Cloud key={index}/>
                 ))}
             </Canvas>
