@@ -7,7 +7,7 @@ const cormorant = Cormorant({ subsets: ['latin']})
 
 export default function About() {
     return (
-        <main className="min-h-screen py-8 px-6 sm:py-12 sm:px-16 sm:w-4/5">
+        <main className="min-h-screen py-8 px-6 sm:py-12 sm:px-16 sm:w-3/5 text-slate-700">
             <nav className="flex gap-5 items-start">    
             <h1 className={`${cormorant.className} text-2xl sm:text-2xl pb-6`}>About Maplibs</h1>
             <Link  href="/">

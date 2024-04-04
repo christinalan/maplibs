@@ -13,7 +13,7 @@ export default function Maplib() {
     const [selectedTab, setSelectedTab] = useState('instructions');
     const [text, setText] = useState(text1);
 
-    const isMobile = window.innerWidth <= 768; 
+    // const isMobile = window.innerWidth <= 768; 
     const bulletPoint = String.fromCodePoint(0x022C6)
 
     function changeInfo () {
@@ -34,8 +34,8 @@ export default function Maplib() {
     }, [selectedTab])
     
     return (
-        <main className="min-h-screen sm:py-20 flex flex-col items-center gap-10 sm:flex-row sm:justify-evenly">
-            <div className="flex flex-col items-center gap-4 sm:gap-10 pt-4 sm:pt-10 sm:w-2/5">
+        <main className="min-h-screen sm:py-20 flex flex-col gap-10 sm:flex-row sm:justify-evenly">
+            <div className="flex flex-col items-center gap-4 sm:gap-10 sm:pt-10 sm:w-2/5 text-slate-100">
                 <nav className="flex flex-col min-w-full items-center">
                     <Link  href="/">
                         <span className="material-symbols-outlined" style={{fontSize:"36px"}}>
@@ -46,7 +46,7 @@ export default function Maplib() {
                     <p onClick={() => setSelectedTab('instructions')}>Instructions</p>
                     <p onClick={() => setSelectedTab('example')}>Example</p>
                 </div>
-                <div className="w-4/5 h-1 bg-slate-100 mt-2"></div>
+                <div className="w-4/5 h-0.5 bg-slate-300 mt-2"></div>
                 </nav>
                 <div className={`px-4 leading-loose ${selectedTab == "instructions" ? "max-w-lg" : "max-w-lg"}`}>{text}</div>
             </div>

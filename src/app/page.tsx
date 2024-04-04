@@ -9,9 +9,9 @@ const cormorant = Cormorant({ subsets: ['latin']})
 
 export default function Home() {
   return (
-    <main className="min-h-screen py-8 px-2 sm:py-12 sm:px-16 flex flex-col">
-    <nav className="flex flex-col items-center">
-      <div className="flex flex-row text-xl sm:text-lg sm:w-1/4 gap-10 sm:place-content-between cursor-pointer text-sky-600">
+    <main className="min-h-screen flex flex-col">
+    <nav className="flex flex-col items-center w-fit py-2 px-2 sm:py-8 sm:px-16">
+      <div className="flex flex-row text-xl sm:text-lg sm:w-1/4 gap-10 sm:place-content-between cursor-pointer text-slate-200">
         <Link href="/about">
           <p className="hover:text-slate-500">About</p>
         </Link>
@@ -20,10 +20,10 @@ export default function Home() {
         </Link>
       </div>
       {/* line under nav */}
-      <div className="w-11/12 sm:w-5/6 h-1 bg-sky-600 mt-2 opacity-50"></div>
+      <div className="w-11/12 sm:w-5/6 h-1 bg-slate-200 mt-2 opacity-50"></div>
      
     <div className="mx-12 sm:mx-2 w-11/12 sm:w-5/6 text-center mt-4">
-        <h1 className={`${cormorant.className} text-2xl sm:text-2xl sm:mx-10 text-slate-600`}>
+        <h1 className={`${cormorant.className} text-2xl sm:text-2xl sm:mx-10 text-slate-100`}>
         The Maplibs Project is a living atlas of the spaces that make feel, remember, and imagine community in the greater Bronzeville neighborhoods.
         </h1>
     </div>
@@ -32,13 +32,13 @@ export default function Home() {
     <div className={`${figtree.className} flex flex-col sm:flex-row gap-5 content-between pt-8 sm:p-32 items-center justify-between`}>
 
     <Link href="/maplib">
-      <div className="bg-sky-500 bg-opacity-60 sm:bg-opacity-70 rounded-full flex items-center text-center justify-center cursor-pointer" style={{width: '200px', height: '200px'}}>
-        <p className="text-slate-600">Play MapLibs</p>
+      <div className="bg-blue-500 bg-opacity-30 rounded-full flex items-center text-center justify-center cursor-pointer" style={{width: '200px', height: '200px'}}>
+        <p className="text-slate-100">Play MapLibs</p>
       </div>
       </Link>
       <Link href="/views">
-      <div className="bg-sky-500 bg-opacity-60 sm:bg-opacity-70 rounded-full flex items-center text-center justify-center cursor-pointer" style={{width: '200px', height: '200px'}}>
-        <p className="text-slate-600">Explore a View of Bronzeville</p>
+      <div className="bg-blue-500 bg-opacity-30 rounded-full flex items-center text-center justify-center cursor-pointer" style={{width: '200px', height: '200px'}}>
+        <p className="text-slate-100">Explore a View of Bronzeville</p>
       </div>
       </Link>
       
