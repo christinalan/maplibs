@@ -65,7 +65,7 @@ const Cloud = () => {
     // Adjustments to position, rotation, and scale
     const position = [Math.random() * 1000 - 500, -Math.random() * Math.random() * 200 + 25, 0];
     const rotation = [0, 0, Math.random() * Math.PI];
-    const scale = [Math.random() * Math.random() * 1.5 + 0.5, Math.random() * Math.random() * 1.5 + 0.5, 1];
+    const scale = [Math.random() * Math.random() * 1.5 + 1, Math.random() * Math.random() * 1.5 + 1, 2];
 
     const updateMousePosition = useCallback((e) => {
         const windowHalfX = window.innerWidth / 2;
@@ -107,7 +107,7 @@ const Cloud = () => {
 
         // //update the camera position ? 
         // state.camera.position.z += Math.sin(timePos) * 0.01
-        state.camera.position.x -= Math.min(Math.max(deltaZ, -0.0005), 0.0005);
+        state.camera.position.x -= Math.min(Math.max(deltaZ, -0.0005), 0.00005);
         state.camera.position.y += (-mouseY.current - state.camera.position.y) * 0.001;
         // state.camera.position.x += (mouseX.current - state.camera.position.x) * 0.001
 
@@ -116,7 +116,7 @@ const Cloud = () => {
 
     return (
         <mesh ref={meshRef}>
-            <planeGeometry args={[30, 30]}/>
+            <planeGeometry args={[50, 50]}/>
             <shaderMaterial 
                 uniforms={uniforms}
                 fragmentShader={fragmentShader}
@@ -136,7 +136,7 @@ export default function Background() {
     return (
         <div className="w-screen h-screen fixed top-0 left-0 -z-10">
             <Canvas 
-                camera={{fov:50, near:1, far:3000, position:camPosition}}
+                camera={{fov:50, near:1, far:1000, position:camPosition}}
                 onCreated={({ gl }) => {
                     // Set pixel ratio for better quality on high-DPI screens
                     gl.setPixelRatio(window.devicePixelRatio);
@@ -148,7 +148,7 @@ export default function Background() {
             >
                
                  {/* Create multiple Cloud instances */}
-                {Array.from({ length: 50 }).map((_, index) => (
+                {Array.from({ length: 100 }).map((_, index) => (
                     <Cloud key={index}/>
                 ))}
             </Canvas>
